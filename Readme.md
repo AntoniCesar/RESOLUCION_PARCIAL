@@ -1,7 +1,7 @@
 EXAMEN\_PARCIAL
 ================
 ANTONI ESQUIVEL
-3/1/2022
+03/01/2022
 
 ## R Markdown
 
@@ -29,7 +29,7 @@ summary(cars)
 
 You can also embed plots, for example:
 
-![](clase_files/figure-gfm/pressure-1.png)<!-- -->
+![](Readme_files/figure-gfm/pressure-1.png)<!-- -->
 
 Note that the `echo = FALSE` parameter was added to the code chunk to
 prevent printing of the R code that generated the plot.
