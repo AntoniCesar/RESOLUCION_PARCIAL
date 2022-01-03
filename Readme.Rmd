@@ -7,22 +7,32 @@ output: github_document
 
 
 
-## R Markdown
+# PREGUNTA  01
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+***CALCULAR LOS VALORES APROXIMADOS DE***
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+```{r}
+m <- (0.3*0.15)/(0.3*0.15+0.2*0.8+0.5*0.12)
+cat("El valor aproximado es de",m)
+```
+```{r}
+m <- (5**6/factorial(6))*(exp(1))**(-5)
+cat("El valor aproximado es de",m)
+```
+# PREGUNTA  02
 
-```{r cars}
-summary(cars)
+***REALIZAR LAS SIGUIENTE SUMAS***
+
+**1+2+3+4+5.......+1000**
+```{r}
+df<-c(1:1000)
+sum(df)
+
 ```
 
-## Including Plots
+**1+2+4+8+16......+1024**
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
