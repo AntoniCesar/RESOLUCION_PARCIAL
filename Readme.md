@@ -125,3 +125,43 @@ cat("Esta en la posición", which.max(nota))
 ```
 
     ## Esta en la posición 120
+
+# PREGUNTA 05
+
+***A partir de los vectores grupo y nota definidos***
+
+**Suma las notas de los 10 primeros alumnos del vector**
+
+``` r
+cat("La Suma es", sum(nota[1:10]))
+```
+
+    ## La Suma es 51.8
+
+**¿Cuántos alumnos hay del grupo C**
+
+``` r
+cat("Hay", length(grupo[grupo == "C"]))
+```
+
+    ## Hay 39
+
+**¿Cuántos alumnos aprobaron?**
+
+``` r
+cat("Hay", length(nota[nota > 5.5]), "alumnos aprobados")
+```
+
+    ## Hay 60 alumnos aprobados
+
+**¿Cuántos alumnos del grupo B aprobaron?**
+
+``` r
+library(tidyverse)
+library(dplyr)
+library(pacman)
+```
+
+``` r
+dfclase <- data.frame(grupo, nota) %>% as_tibble() 
+```
