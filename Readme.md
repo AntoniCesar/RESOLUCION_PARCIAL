@@ -165,3 +165,38 @@ library(pacman)
 ``` r
 dfclase <- data.frame(grupo, nota) %>% as_tibble() 
 ```
+
+``` r
+GrupoB <- dfclase %>% 
+  dplyr::filter(nota > 5.5 & grupo == "B") 
+cat("El numero de alumnos aprobados en el grupo B es:", length(GrupoB$grupo))
+```
+
+    ## El numero de alumnos aprobados en el grupo B es: 8
+
+**¿Qué Porcentaje de alumnos del grupo C aprobaron?**
+
+``` r
+GrupoC <- dfclase %>% 
+  dplyr::filter(nota > 5.5 & grupo == "C") 
+
+cat("El porcentaje de alumnos aprobado del aula C son:",
+      ((length(GrupoC$grupo)/length(dfclase$grupo))*100),"%")
+```
+
+    ## El porcentaje de alumnos aprobado del aula C son: 9.375 %
+
+**¿De que grupo son la máxima y minima nota de las muestras?**
+
+``` r
+Notmax <- dfclase %>% 
+   dplyr::arrange(desc(nota))
+
+Notmin <- dfclase %>% 
+   dplyr::arrange(nota)
+
+cat("La nota máxima le pertenece al grupo", Notmax$grupo[1], 
+    "Y la nota mínima le pertenece al grupo", Notmin$grupo[1])
+```
+
+    ## La nota máxima le pertenece al grupo E Y la nota mínima le pertenece al grupo B
